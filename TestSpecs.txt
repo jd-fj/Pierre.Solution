@@ -1,0 +1,22 @@
+Pseudo Tests:
+
+1. create bread object
+2. 1 loaf of bread is $5
+3. total cost = 5 * loafs
+
+4. create pastry object
+5. 1 pastry is $2
+6. grand total = 2 * pastries
+
+7. incorporate Pierre's promotional costs (buy 2 get 1 free bread, 3 pastries for $5)
+
+8. build UI logic
+9. refactor and separate classes into separate files
+10. 
+
+
+--------------------------------
+**Actual Tests:**
+
+1. Can I create a new instance of Bread?
+2. Can Bread hold a value for total cost?
