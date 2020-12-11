@@ -34,5 +34,10 @@ Discount percentage  = 5/(15) = 0.333… = 33 1/3 %
 3. Can bread calculate cost based on quantity desired?
 4. Can bread calculate cost for the sale price of Bread
 
+6. Add second class for Pastry objects, can the app instantiate the new object
+7. Can Pastry hold a value for total cost and can we get that total cost with dot notation?
+8. Can Pastry calculate cost based on quantity desired
+9. can Pastry calculate cost for the sale price of Pastries
+
 
 
