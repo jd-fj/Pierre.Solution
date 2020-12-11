@@ -14,13 +14,23 @@ namespace Pierre.Tests
     }
     [TestMethod]
     public void
-    GetTotalCost_ReturnsTotalCostOfBread_Int()
+    GetQuantity_ReturnsQuantityOfBread_Int()
     {
       int quantity = 2;
-      int falseQuant = 3;
       Bread newBreadOrder = new Bread(quantity);
       int result = newBreadOrder.Quantity;
       Assert.AreEqual(quantity, result);
     }
+    [TestMethod]
+      public void
+      GetBreadCost_ReturnsCostOfBreadOrder_Int()
+      {
+        int quantity = 2;
+        int expectedTotal = 10;
+        Bread newBreadOrder = new Bread(quantity);
+        int breadQuantity = newBreadOrder.Quantity;
+        int breadCost = newBreadOrder.TotalCost;
+        Assert.AreEqual(breadCost, quantity);
+      }
   }
 }
