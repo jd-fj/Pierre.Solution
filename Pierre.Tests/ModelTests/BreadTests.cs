@@ -67,7 +67,7 @@ namespace Pierre.Tests
     GetPastryCost_ReturnsCostOfPastryOrder_Int()
     {
       int quantity = 2;
-      int expectedTotal = 3;
+      int expectedTotal = 4;
       Pastry newPastryOrder = new Pastry(quantity);
       int pastryQuantity = newPastryOrder.Quantity;
       int pastryCost = newPastryOrder.TotalCost;
