@@ -78,7 +78,7 @@ namespace Pierre.Tests
     GetPastrySaleCost_ReturnsSaleCostOfPastryOrder_Int()
     {
       int quantity = 3;
-      int expectedTotal = 4;
+      int expectedTotal = 5;
       Pastry newPastryOrder = new Pastry(quantity);
       double pastrySaleCost = newPastryOrder.SaleCost;
       Assert.AreEqual(pastrySaleCost, expectedTotal);
