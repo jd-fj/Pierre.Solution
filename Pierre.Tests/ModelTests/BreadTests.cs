@@ -53,5 +53,15 @@ namespace Pierre.Tests
       Pastry newPastryOrder = new Pastry(2);
       Assert.AreEqual(typeof(Pastry), newPastryOrder.GetType());
     }
+    [TestMethod]
+    public void
+    GetQuantity_ReturnsQuantityOfPastry_Int()
+    {
+      int quantity = 2;
+      int falseQuantity = 3;
+      Pastry newPastryOrder = new Pastry(quantity);
+      int result = newPastryOrder.Quantity;
+      Assert.AreEqual(falseQuantity, result);
+    }
   }
 }
