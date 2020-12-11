@@ -20,7 +20,7 @@ namespace Pierre.Tests
       int falseQuant = 3;
       Bread newBreadOrder = new Bread(quantity);
       int result = newBreadOrder.Quantity;
-      Assert.AreEqual(falseQuant, result);
+      Assert.AreEqual(quantity, result);
     }
   }
 }
