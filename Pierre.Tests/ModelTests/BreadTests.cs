@@ -9,9 +9,8 @@ namespace Pierre.Tests
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      string testString = "ima string!";
       Bread newBread = new Bread();
-      Assert.AreEqual(testString.GetType(), newBread.GetType());
+      Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
   }
 }
