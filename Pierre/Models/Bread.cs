@@ -19,10 +19,12 @@ namespace Pierre.Models
   public class Pastry
   {
     public int Quantity { get; }
+    public int TotalCost { get; }
 
     public Pastry(int quantity)
     {
       Quantity = quantity;
+      TotalCost = quantity * 2;
     }
   }
 }
