@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pierre.Models;
-
+using System;
 
 namespace Pierre.Tests
 {
@@ -72,6 +72,16 @@ namespace Pierre.Tests
       int pastryQuantity = newPastryOrder.Quantity;
       int pastryCost = newPastryOrder.TotalCost;
       Assert.AreEqual(pastryCost, expectedTotal);
+    }
+    [TestMethod]
+    public void 
+    GetPastrySaleCost_ReturnsSaleCostOfPastryOrder_Int()
+    {
+      int quantity = 3;
+      int expectedTotal = 4;
+      Pastry newPastryOrder = new Pastry(quantity);
+      double pastrySaleCost = newPastryOrder.SaleCost;
+      Assert.AreEqual(pastrySaleCost, expectedTotal);
     }
   }
 }
