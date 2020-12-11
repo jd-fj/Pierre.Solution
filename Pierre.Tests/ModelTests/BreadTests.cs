@@ -37,7 +37,7 @@ namespace Pierre.Tests
       public void
       GetBreadSaleCost_ReturnsCostOfBreadOnSale_Int()
       {
-        int quantity = 2;
+        int quantity = 3;
         double expectedTotal = 10;
         Bread newBreadOrder = new Bread(quantity);
         double breadSaleCost = newBreadOrder.SaleCost;
