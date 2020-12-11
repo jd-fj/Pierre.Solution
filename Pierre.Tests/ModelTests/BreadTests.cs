@@ -50,9 +50,8 @@ namespace Pierre.Tests
     [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
-      string testString = "i'ma string!";
       Pastry newPastryOrder = new Pastry(2);
-      Assert.AreEqual(testString.GetType(), newPastryOrder.GetType());
+      Assert.AreEqual(typeof(Pastry), newPastryOrder.GetType());
     }
   }
 }
