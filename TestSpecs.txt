@@ -19,4 +19,4 @@ Pseudo Tests:
 **Actual Tests:**
 
 1. Can I create a new instance of Bread?
-2. Can Bread hold a value for total cost?
+2. Can Bread hold a value for total cost and can we get that total cost with dot notation?
