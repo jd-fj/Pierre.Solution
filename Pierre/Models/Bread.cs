@@ -1,3 +1,4 @@
+using System;
 
 namespace Pierre.Models
 {
@@ -5,11 +6,23 @@ namespace Pierre.Models
   {
     public int Quantity { get; }
     public int TotalCost { get; }
+    public double SaleCost { get; }
 
     public Bread(int quantity)
     {
       Quantity = quantity;
       TotalCost = quantity * 5;
+      SaleCost = Math.Round(quantity * (3.33));
+    }
+  }
+
+  public class Pastry
+  {
+    public int Quantity { get; }
+
+    public Pastry(int quantity)
+    {
+      Quantity = quantity;
     }
   }
 }
