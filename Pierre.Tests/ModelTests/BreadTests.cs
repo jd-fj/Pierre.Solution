@@ -7,10 +7,11 @@ namespace Pierre.Tests
   public class BreadTests
   {
     [TestMethod]
-    // public void BreadConstructor_CreatesInstanceOfBread_Bread()
-    // {
-    //   Bread newBread = new Bread();
-    //   Assert.AreEqual(typeof(Bread), newBread.GetType());
+    public void BreadConstructor_CreatesInstanceOfBread_Bread()
+    {
+      string testString = "ima string!";
+      Bread newBread = new Bread();
+      Assert.AreEqual(testString.GetType(), newBread.GetType());
     }
   }
 }
