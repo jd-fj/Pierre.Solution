@@ -30,7 +30,7 @@ namespace Pierre.Tests
         Bread newBreadOrder = new Bread(quantity);
         int breadQuantity = newBreadOrder.Quantity;
         int breadCost = newBreadOrder.TotalCost;
-        Assert.AreEqual(breadCost, quantity);
+        Assert.AreEqual(breadCost, expectedTotal);
       }
   }
 }
