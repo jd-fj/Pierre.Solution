@@ -6,7 +6,7 @@
 
 ## **Description**
 
-This is the first independent project for C# at Epicodus. Here is the prompt for the application: 
+This is the first C# independent project for Epicodus. Here is the prompt for the application: 
 
 _Create a C# console application for a bakery that includes the following functionality:_
 
@@ -22,9 +22,9 @@ _Create a C# console application for a bakery that includes the following functi
 
 - All functionality for the models should be tested.
 
-## Screen Snaps
+## Screen Snaps:
 
-<img src='./filename.gif' alt='filename.gif'>
+<img src='./filename.gif' alt='When I build out a fricken sweet UI console app tomorrow, this gif will look so pretty, and this alt text will be hidden'>
 
 
 ## Setup and Use
