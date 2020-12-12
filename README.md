@@ -42,10 +42,10 @@ _Create a C# console application for a bakery that includes the following functi
 ### Download
 _Open terminal and type the following lines_
 * `$ cd desktop`
-* `$ git clone `
+* `$ git clone https://github.com/taylulz/Pierre-s-Bakery.git`
 * `$ cd Pierre-s-Bakery-main`
 
-_To run this Console Application, enter to following command in terminal_
+_To run this Console Application, enter the following command in terminal_
 
 * `dotnet run`
 
@@ -60,7 +60,7 @@ _To run this Console Application, enter to following command in terminal_
 
 
 ### Support and contact
-Please feel free to reach out if you encounter errors, bugs, or problems <taylulzcode@gmail.com>.
+If you haven't received your bread or pastries, or if you've encountered an error, please reach out to <taylulzcode@gmail.com>.
 
 ## License
 
