@@ -4,9 +4,9 @@
 
 ##### by Taylor Delph
 
-## Description
+## **Description**
 
-This is the first independent project for C# at Epicodus. Here is the prompt I was given to build this application: 
+This is the first independent project for C# at Epicodus. Here is the prompt for the application: 
 
 _Create a C# console application for a bakery that includes the following functionality:_
 

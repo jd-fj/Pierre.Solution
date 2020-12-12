@@ -40,6 +40,3 @@ Discount percentage  = 5/(15) = 0.333… = 33 1/3 %
 9. can Pastry calculate cost for the sale price of Pastries
 
 10. Build out UI logic 8-|
-
-
-
