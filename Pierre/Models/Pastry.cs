@@ -2,17 +2,17 @@ using System;
 
 namespace Pierre.Models
 {
-  public class Bread
+  public class Pastry
   {
     public int Quantity { get; }
     public int TotalCost { get; }
     public double SaleCost { get; }
 
-    public Bread(int quantity)
+    public Pastry(int quantity)
     {
       Quantity = quantity;
-      TotalCost = quantity * 5;
-      SaleCost = Math.Round(quantity * (3.33));
+      TotalCost = quantity * 2;
+      SaleCost = Math.Round(quantity * (1.66));
     }
   }
 }
