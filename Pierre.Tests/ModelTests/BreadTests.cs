@@ -95,7 +95,7 @@ namespace Pierre.Tests
     [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
-      Pastry newPastryOrder = new Pastry(2);
+      Pastry newPastryOrder = new Pastry("biscuit", 2);
       Assert.AreEqual(typeof(Pastry), newPastryOrder.GetType());
     }
     [TestMethod]
@@ -103,7 +103,7 @@ namespace Pierre.Tests
     GetQuantity_ReturnsQuantityOfPastry_Int()
     {
       int quantity = 2;
-      Pastry newPastryOrder = new Pastry(quantity);
+      Pastry newPastryOrder = new Pastry("biscuit", quantity);
       int result = newPastryOrder.Quantity;
       Assert.AreEqual(quantity, result);
     }
@@ -113,7 +113,7 @@ namespace Pierre.Tests
     {
       int quantity = 2;
       int expectedTotal = 4;
-      Pastry newPastryOrder = new Pastry(quantity);
+      Pastry newPastryOrder = new Pastry("biscuit", quantity);
       int pastryQuantity = newPastryOrder.Quantity;
       int pastryCost = newPastryOrder.TotalCost;
       Assert.AreEqual(pastryCost, expectedTotal);
@@ -124,7 +124,7 @@ namespace Pierre.Tests
     {
       int quantity = 3;
       int expectedTotal = 5;
-      Pastry newPastryOrder = new Pastry(quantity);
+      Pastry newPastryOrder = new Pastry("biscuit", quantity);
       double pastrySaleCost = newPastryOrder.SaleCost;
       Assert.AreEqual(pastrySaleCost, expectedTotal);
     }
