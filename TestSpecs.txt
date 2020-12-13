@@ -43,4 +43,6 @@ So I am using the Bread and Pastry objects more like methods to calculate prices
 8. Can Pastry calculate cost based on quantity desired
 9. can Pastry calculate cost for the sale price of Pastries
 
+* Add BreadType field to bread class
+
 10. Build out UI logic 8-|
