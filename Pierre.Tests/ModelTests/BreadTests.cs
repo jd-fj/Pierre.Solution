@@ -136,5 +136,14 @@ namespace Pierre.Tests
       string pastryType = newPastry.PastryKind;
       Assert.AreEqual(pastryType, "biscuit");
     }
+    [TestMethod]
+    public void
+    SetPastryType_SetsTypeOfPastry_Str()
+    {
+      Pastry newPastry = new Pastry("biscuit", 2);
+      newPastry.PastryKind = "croissant";
+      string pastryType = newPastry.PastryKind;
+      Assert.AreEqual(breadType, "pita");
+    }
   }
 }
