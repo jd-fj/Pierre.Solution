@@ -69,11 +69,24 @@ namespace Pierre.Tests
       }
       [TestMethod]
       public void
-      GetAll_ReturnsEmptyList_BreadList()
+      GetAll_ReturnsEmptyList_EmptyBreadList()
       {
         List<Bread> newBreadOrder = new List<Bread> { };
         List<Bread> result = Bread.GetAll();
         CollectionAssert.AreEqual(newBreadOrder, result);
+      }
+      [TestMethod]
+      public void
+      GetAll_ReturnsBread_BreadList()
+      {
+        string breadKind = "french";
+        string breadKind2 = "pita";
+        Bread loaf1 = new Bread(breadKind, 2);
+        Bread loaf2 = new Bread(breadKind2, 3);
+        List<Bread> newBreadList = new List<Bread> { loaf1, loaf2 };
+        List<Bread> falseList = new List<Bread> {};
+        List<Bread> result = Bread.GetAll();
+        CollectionAssert.AreEqual(falseList, result);
       }
     }
 
