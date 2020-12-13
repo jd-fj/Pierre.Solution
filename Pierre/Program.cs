@@ -27,17 +27,18 @@ class Program
     else
     {
       // go to pastry method!
-      Console.WriteLine("Transferring you to our Pastry department...");
+      OrderPastry();
     }
   }
   public static void OrderBread()
   {
-    Console.WriteLine("Please selection from our following bread items:");
+    Console.WriteLine("Please select from our following bread items:");
     Console.WriteLine("----------------");
     foreach (string loaf in breadMenu)
     {
     Console.WriteLine(loaf);
     }
+    Console.WriteLine("----------------");
 
     Console.WriteLine("What type of bread do you want?");
     string breadSelection = Console.ReadLine();
@@ -45,7 +46,25 @@ class Program
     Console.WriteLine("How many of these " + breadSelection + " bread loaves do you want?");
     int breadQuant = int.Parse(Console.ReadLine());
     Bread breadOrder = new Bread(breadSelection, breadQuant);
-    Console.WriteLine("you ordered " + breadOrder.Quantity + " of the " + breadOrder.BreadKind + " loaves." );
+    Console.WriteLine("you ordered " + breadOrder.Quantity + " of the " + breadOrder.BreadKind);
+    Console.WriteLine("Bread order recieved! Press ['enter'] to see our Pastry menu");
+    Console.ReadLine();
+    OrderPastry();
+  }
+  public static void OrderPastry()
+  {
+    Console.WriteLine("What type of pastry would you like?");
+    Console.WriteLine("----------------");
+    foreach (string pastry in pastryMenu)
+    {
+      Console.WriteLine(pastry);
+    }
+    Console.WriteLine("----------------");
+    string pastrySelection = Console.ReadLine();
+    Console.WriteLine("How many of the " + pastrySelection + " do you want?");
+    int pastryQuant = int.Parse(Console.ReadLine());
+    Pastry newPastryOrder = new Pastry(pastrySelection, pastryQuant);
+    Console.WriteLine("You ordered " + pastryQuant + " of the " + pastrySelection);
   }
 } 
 
