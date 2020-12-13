@@ -47,4 +47,9 @@ So I am using the Bread and Pastry objects more like methods to calculate prices
 * Test to *Set* BreadType field in bread object
 * Make static list variable for all Bread instances
 
+* Test to *Get* PastryKind field in pastry object
+* Test to *Set* PastryKind field in pastry object
+* Make static list variable for all Pastry instances
+
+
 10. Build out UI logic 8-|
