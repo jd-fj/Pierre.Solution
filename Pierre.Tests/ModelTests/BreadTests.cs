@@ -169,7 +169,7 @@ namespace Pierre.Tests
       List<Pastry> newPastryList = new List<Pastry> { pastry1, pastry2 };
       List<Pastry> result = Pastry.GetAll();
       List<Pastry> falsePastryList = new List<Pastry> { pastry1, };
-      CollectionAssert.AreEqual(falsePastryList, result);
+      CollectionAssert.AreEqual(newPastryList, result);
     }
   }
 }
