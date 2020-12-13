@@ -51,6 +51,15 @@ namespace Pierre.Tests
         string breadType = newBreadOrder.BreadKind;
         Assert.AreEqual(breadType, "pita");
       }
+    [TestMethod]
+      public void
+      SetBreadType_SetsTypeOfBread_Str()
+      {
+        Bread newBreadOrder = new Bread("french", 2);
+        newBreadOrder.BreadKind = "pita";
+        string breadType = newBreadOrder.BreadKind;
+        Assert.AreEqual(breadType, "pita");
+      }
   }
   [TestClass]
   public class PastryTests

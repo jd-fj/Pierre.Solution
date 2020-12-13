@@ -4,7 +4,7 @@ namespace Pierre.Models
 {
   public class Bread
   {
-    public string BreadKind { get; }
+    public string BreadKind { get; set; }
     public int Quantity { get; }
     public int TotalCost { get; }
     public double SaleCost { get; }
