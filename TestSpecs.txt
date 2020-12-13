@@ -26,6 +26,10 @@ Discount  = 3(5) − 2(5) = 𝑥
 Discount percentage  = 5/(15) = 0.333… = 33 1/3 %
 ** Quantity of bread times 3.33333333333...
 
+
+So I am using the Bread and Pastry objects more like methods to calculate prices. I'm learning from my mistakes that the objects I'm creating need to represent actual items in the store, therefore I'm going to implement the type of product it is (pita bread) and the quantity desired within the object field & constructor. Then I need to refactor what I have going on for the total cost and sale cost into a custom method. When I call that method on (I'm thinking maybe a list of bread loaves ordered) it will calculate the price based on quantity (like it is currently doing inside the object constructor)
+
+
 --------------------------------
 **Actual Tests:**
 
