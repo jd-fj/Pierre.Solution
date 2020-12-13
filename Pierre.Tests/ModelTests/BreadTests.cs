@@ -145,5 +145,13 @@ namespace Pierre.Tests
       string pastryType = newPastry.PastryKind;
       Assert.AreEqual(pastryType, "croissant");
     }
+    [TestMethod]
+    public void
+    GetAll_ReturnsEmptyList_EmptyPastryList()
+    {
+      List<Pastry> newPastryList = new List<Pastry> { };
+      List<Pastry> result = Pastry.GetAll();
+      CollectionAssert.AreEqual(newPastryList, result);
+    }
   }
 }
