@@ -58,7 +58,7 @@ namespace Pierre.Tests
         Bread newBreadOrder = new Bread("french", 2);
         newBreadOrder.BreadKind = "pita";
         string breadType = newBreadOrder.BreadKind;
-        Assert.AreEqual(breadType, "french");
+        Assert.AreEqual(breadType, "pita");
       }
   }
   [TestClass]
