@@ -16,5 +16,6 @@ namespace Pierre.Models
       TotalCost = quantity * 5;
       SaleCost = Math.Round(quantity * (3.33));
     }
+    
   }
 }
