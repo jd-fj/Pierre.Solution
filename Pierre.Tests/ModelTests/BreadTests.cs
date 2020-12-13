@@ -23,43 +23,44 @@ namespace Pierre.Tests
       Assert.AreEqual(quantity, result);
     }
     [TestMethod]
-      public void
-      GetBreadCost_ReturnsCostOfBreadOrder_Int()
-      {
-        int quantity = 2;
-        int expectedTotal = 10;
-        Bread newBreadOrder = new Bread("pita", quantity);
-        int breadQuantity = newBreadOrder.Quantity;
-        int breadCost = newBreadOrder.TotalCost;
-        Assert.AreEqual(breadCost, expectedTotal);
-      }
+    public void
+    GetBreadCost_ReturnsCostOfBreadOrder_Int()
+    {
+      int quantity = 2;
+      int expectedTotal = 10;
+      Bread newBreadOrder = new Bread("pita", quantity);
+      int breadQuantity = newBreadOrder.Quantity;
+      int breadCost = newBreadOrder.TotalCost;
+      Assert.AreEqual(breadCost, expectedTotal);
+    }
     [TestMethod]
-      public void
-      GetBreadSaleCost_ReturnsCostOfBreadOnSale_Int()
-      {
-        int quantity = 3;
-        double expectedTotal = 10;
-        Bread newBreadOrder = new Bread("pita", quantity);
-        double breadSaleCost = newBreadOrder.SaleCost;
-        Assert.AreEqual(breadSaleCost, expectedTotal);
-      }
+    public void
+    GetBreadSaleCost_ReturnsCostOfBreadOnSale_Int()
+    {
+      int quantity = 3;
+      double expectedTotal = 10;
+      Bread newBreadOrder = new Bread("pita", quantity);
+      double breadSaleCost = newBreadOrder.SaleCost;
+      Assert.AreEqual(breadSaleCost, expectedTotal);
+    }
     [TestMethod]
-      public void
-      GetBreadType_ReturnsTypeOfBread_Str()
-      {
-        Bread newBreadOrder = new Bread("pita", 2);
-        string breadType = newBreadOrder.BreadKind;
-        Assert.AreEqual(breadType, "pita");
-      }
+    public void
+    GetBreadType_ReturnsTypeOfBread_Str()
+    {
+      Bread newBreadOrder = new Bread("pita", 2);
+      string breadType = newBreadOrder.BreadKind;
+      Assert.AreEqual(breadType, "pita");
+    }
     [TestMethod]
-      public void
-      SetBreadType_SetsTypeOfBread_Str()
-      {
-        Bread newBreadOrder = new Bread("french", 2);
-        newBreadOrder.BreadKind = "pita";
-        string breadType = newBreadOrder.BreadKind;
-        Assert.AreEqual(breadType, "pita");
-      }
+    public void
+    SetBreadType_SetsTypeOfBread_Str()
+    {
+      Bread newBreadOrder = new Bread("french", 2);
+      newBreadOrder.BreadKind = "pita";
+      string breadType = newBreadOrder.BreadKind;
+      Assert.AreEqual(breadType, "pita");
+    }
+    [TestMethod]
   }
   [TestClass]
   public class PastryTests
