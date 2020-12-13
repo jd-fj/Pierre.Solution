@@ -10,7 +10,7 @@ namespace Pierre.Tests
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      Bread newBreadOrder = new Bread(2);
+      Bread newBreadOrder = new Bread("pita", 2);
       Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
     }
     [TestMethod]
@@ -18,7 +18,7 @@ namespace Pierre.Tests
     GetQuantity_ReturnsQuantityOfBread_Int()
     {
       int quantity = 2;
-      Bread newBreadOrder = new Bread(quantity);
+      Bread newBreadOrder = new Bread("pita", quantity);
       int result = newBreadOrder.Quantity;
       Assert.AreEqual(quantity, result);
     }
@@ -28,7 +28,7 @@ namespace Pierre.Tests
       {
         int quantity = 2;
         int expectedTotal = 10;
-        Bread newBreadOrder = new Bread(quantity);
+        Bread newBreadOrder = new Bread("pita", quantity);
         int breadQuantity = newBreadOrder.Quantity;
         int breadCost = newBreadOrder.TotalCost;
         Assert.AreEqual(breadCost, expectedTotal);
@@ -39,9 +39,17 @@ namespace Pierre.Tests
       {
         int quantity = 3;
         double expectedTotal = 10;
-        Bread newBreadOrder = new Bread(quantity);
+        Bread newBreadOrder = new Bread("pita", quantity);
         double breadSaleCost = newBreadOrder.SaleCost;
         Assert.AreEqual(breadSaleCost, expectedTotal);
+      }
+    [TestMethod]
+      public void
+      GetBreadType_ReturnsTypeOfBread_Str()
+      {
+        Bread newBreadOrder = new Bread("pita", 2);
+        string breadType = newBreadOrder.BreadKind;
+        Assert.AreEqual(breadType, "pita");
       }
   }
   [TestClass]
