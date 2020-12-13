@@ -86,7 +86,7 @@ namespace Pierre.Tests
         List<Bread> newBreadList = new List<Bread> { loaf1, loaf2 };
         List<Bread> falseList = new List<Bread> {};
         List<Bread> result = Bread.GetAll();
-        CollectionAssert.AreEqual(falseList, result);
+        CollectionAssert.AreEqual(newBreadList, result);
       }
     }
 
