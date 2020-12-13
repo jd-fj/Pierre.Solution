@@ -90,8 +90,13 @@ namespace Pierre.Tests
     }
 
   [TestClass]
-  public class PastryTests
+  public class PastryTests : IDisposable
   {
+    public void Dispose()
+    {
+      Pastry.ClearAll();
+    }
+    
     [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
@@ -147,7 +152,7 @@ namespace Pierre.Tests
     }
     [TestMethod]
     public void
-    GetAll_ReturnsEmptyList_EmptyPastryList()
+    GetAll_ReturnsEmptyPastryList_EmptyPastryList()
     {
       List<Pastry> newPastryList = new List<Pastry> { };
       List<Pastry> result = Pastry.GetAll();
