@@ -128,5 +128,13 @@ namespace Pierre.Tests
       double pastrySaleCost = newPastryOrder.SaleCost;
       Assert.AreEqual(pastrySaleCost, expectedTotal);
     }
+    [TestMethod]
+    public void
+    GetPastryType_ReturnsTypeOfPastry_Str()
+    {
+      Pastry newPastry = new Pastry("biscuit", 2);
+      string pastryType = newPastry.PastryKind;
+      Assert.AreEqual(pastryType, "biscuit");
+    }
   }
 }
