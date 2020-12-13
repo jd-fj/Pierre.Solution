@@ -49,7 +49,7 @@ namespace Pierre.Tests
       {
         Bread newBreadOrder = new Bread("pita", 2);
         string breadType = newBreadOrder.BreadKind;
-        Assert.AreEqual(breadType, "pita");
+        Assert.AreEqual(breadType, "pta");
       }
   }
   [TestClass]
