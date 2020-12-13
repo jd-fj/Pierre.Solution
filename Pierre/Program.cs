@@ -4,22 +4,37 @@ using System.Collections.Generic;
 
 class Program
 {
-  public static Bread pita = new Bread("pita", 0);
-  public static Bread french = new Bread("french", 0);
-
+  // public static Bread pita = new Bread("pita", 0);
+  // public static Bread french = new Bread("french", 0);
   // public static List<Bread> allBread = new List<Bread>() {pita, french};
-  public static string[] pierreBreadMenu = {"pita", "french"};
+  public static string[] breadMenu = { "pita", "french" };
 
-  public static Pastry biscuit = new Pastry("biscuit", 0);
-  public static Pastry croissant = new Pastry("croissant", 0);
-
-  public static List<Pastry> allPastries = new List<Pastry>() {biscuit, croissant};
+  // public static Pastry biscuit = new Pastry("biscuit", 0);
+  // public static Pastry croissant = new Pastry("croissant", 0);
+  // public static List<Pastry> allPastries = new List<Pastry>() {biscuit, croissant};
+  public static string[] pastryMenu = { "biscuits", "croissants" };
 
   public static void Main()
   {
-    Console.WriteLine("Here's the bread list: ");
+    Console.WriteLine("Welcome to Pierre's Bakery!");
+    Console.WriteLine("Would you like to order some Bread? ['Y' for yes, 'N' for no]");
+    string breadYesOrNo = Console.ReadLine().ToLower();
+    if (breadYesOrNo == "y")
+    {
+      // go to new bread order method
+      Console.WriteLine("Transferring to Bread Order section...");
+    }
+    else
+    {
+      // go to pastry method!
+      Console.WriteLine("Transferring you to our Pastry department...");
+    }
 
-    foreach (string loaf in pierreBreadMenu)
+    
+  }
+  public void OrderBread()
+  {
+    foreach (string loaf in breadMenu)
     {
     Console.WriteLine(loaf);
     }
