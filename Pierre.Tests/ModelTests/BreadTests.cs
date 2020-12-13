@@ -1,67 +1,82 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pierre.Models;
 using System;
+using System.Collections.Generic;
 
 namespace Pierre.Tests
 {
   [TestClass]
-  public class BreadTests
+  public class BreadTests : IDisposable
   {
-    [TestMethod]
-    public void BreadConstructor_CreatesInstanceOfBread_Bread()
+
+    public void Dispose()
     {
-      Bread newBreadOrder = new Bread("pita", 2);
-      Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
+      Bread.ClearAll();
     }
-    [TestMethod]
-    public void
-    GetQuantity_ReturnsQuantityOfBread_Int()
-    {
-      int quantity = 2;
-      Bread newBreadOrder = new Bread("pita", quantity);
-      int result = newBreadOrder.Quantity;
-      Assert.AreEqual(quantity, result);
+
+      [TestMethod]
+      public void BreadConstructor_CreatesInstanceOfBread_Bread()
+      {
+        Bread newBreadOrder = new Bread("pita", 2);
+        Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
+      }
+      [TestMethod]
+      public void
+      GetQuantity_ReturnsQuantityOfBread_Int()
+      {
+        int quantity = 2;
+        Bread newBreadOrder = new Bread("pita", quantity);
+        int result = newBreadOrder.Quantity;
+        Assert.AreEqual(quantity, result);
+      }
+      [TestMethod]
+      public void
+      GetBreadCost_ReturnsCostOfBreadOrder_Int()
+      {
+        int quantity = 2;
+        int expectedTotal = 10;
+        Bread newBreadOrder = new Bread("pita", quantity);
+        int breadQuantity = newBreadOrder.Quantity;
+        int breadCost = newBreadOrder.TotalCost;
+        Assert.AreEqual(breadCost, expectedTotal);
+      }
+      [TestMethod]
+      public void
+      GetBreadSaleCost_ReturnsCostOfBreadOnSale_Int()
+      {
+        int quantity = 3;
+        double expectedTotal = 10;
+        Bread newBreadOrder = new Bread("pita", quantity);
+        double breadSaleCost = newBreadOrder.SaleCost;
+        Assert.AreEqual(breadSaleCost, expectedTotal);
+      }
+      [TestMethod]
+      public void
+      GetBreadType_ReturnsTypeOfBread_Str()
+      {
+        Bread newBreadOrder = new Bread("pita", 2);
+        string breadType = newBreadOrder.BreadKind;
+        Assert.AreEqual(breadType, "pita");
+      }
+      [TestMethod]
+      public void
+      SetBreadType_SetsTypeOfBread_Str()
+      {
+        Bread newBreadOrder = new Bread("french", 2);
+        newBreadOrder.BreadKind = "pita";
+        string breadType = newBreadOrder.BreadKind;
+        Assert.AreEqual(breadType, "pita");
+      }
+      [TestMethod]
+      public void
+      GetAll_ReturnsEmptyList_BreadList()
+      {
+        List<Bread> newBreadOrder = new List<Bread> { };
+        List<Bread> result = Bread.GetAll();
+        CollectionAssert.AreEqual(newBreadOrder, result);
+      }
     }
-    [TestMethod]
-    public void
-    GetBreadCost_ReturnsCostOfBreadOrder_Int()
-    {
-      int quantity = 2;
-      int expectedTotal = 10;
-      Bread newBreadOrder = new Bread("pita", quantity);
-      int breadQuantity = newBreadOrder.Quantity;
-      int breadCost = newBreadOrder.TotalCost;
-      Assert.AreEqual(breadCost, expectedTotal);
-    }
-    [TestMethod]
-    public void
-    GetBreadSaleCost_ReturnsCostOfBreadOnSale_Int()
-    {
-      int quantity = 3;
-      double expectedTotal = 10;
-      Bread newBreadOrder = new Bread("pita", quantity);
-      double breadSaleCost = newBreadOrder.SaleCost;
-      Assert.AreEqual(breadSaleCost, expectedTotal);
-    }
-    [TestMethod]
-    public void
-    GetBreadType_ReturnsTypeOfBread_Str()
-    {
-      Bread newBreadOrder = new Bread("pita", 2);
-      string breadType = newBreadOrder.BreadKind;
-      Assert.AreEqual(breadType, "pita");
-    }
-    [TestMethod]
-    public void
-    SetBreadType_SetsTypeOfBread_Str()
-    {
-      Bread newBreadOrder = new Bread("french", 2);
-      newBreadOrder.BreadKind = "pita";
-      string breadType = newBreadOrder.BreadKind;
-      Assert.AreEqual(breadType, "pita");
-    }
-    [TestMethod]
-  }
+
   [TestClass]
   public class PastryTests
   {

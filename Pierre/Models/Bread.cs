@@ -25,5 +25,10 @@ namespace Pierre.Models
       return _breadOrder;
     }
 
+    public static void ClearAll()
+    {
+      _breadOrder.Clear();
+    }
+
   }
 }
