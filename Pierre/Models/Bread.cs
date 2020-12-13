@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Pierre.Models
 {
@@ -8,6 +9,7 @@ namespace Pierre.Models
     public int Quantity { get; }
     public int TotalCost { get; }
     public double SaleCost { get; }
+    private static List<Bread> _breadOrder = new List<Bread> {};
 
     public Bread(string breadKind, int quantity)
     {
@@ -15,7 +17,13 @@ namespace Pierre.Models
       Quantity = quantity;
       TotalCost = quantity * 5;
       SaleCost = Math.Round(quantity * (3.33));
+      _breadOrder.Add(this);
     }
-    
+
+    public static List<Bread> GetAll()
+    {
+      return _breadOrder;
+    }
+
   }
 }
