@@ -17,23 +17,23 @@ class Program
   public static void Main()
   {
     Console.WriteLine("Welcome to Pierre's Bakery!");
-    Console.WriteLine("Would you like to order some Bread? ['Y' for yes, 'N' for no]");
+    Console.WriteLine("Would you like to order some of our fine Breads? ['Y' for yes, 'N' for no]");
     string breadYesOrNo = Console.ReadLine().ToLower();
     if (breadYesOrNo == "y")
     {
       // go to new bread order method
-      Console.WriteLine("Transferring to Bread Order section...");
+      OrderBread();
     }
     else
     {
       // go to pastry method!
       Console.WriteLine("Transferring you to our Pastry department...");
     }
-
-    
   }
-  public void OrderBread()
+  public static void OrderBread()
   {
+    Console.WriteLine("Please selection from our following bread items:");
+    Console.WriteLine("----------------");
     foreach (string loaf in breadMenu)
     {
     Console.WriteLine(loaf);
