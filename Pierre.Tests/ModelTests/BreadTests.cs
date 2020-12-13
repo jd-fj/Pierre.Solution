@@ -96,7 +96,7 @@ namespace Pierre.Tests
     {
       Pastry.ClearAll();
     }
-    
+
     [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
@@ -157,6 +157,19 @@ namespace Pierre.Tests
       List<Pastry> newPastryList = new List<Pastry> { };
       List<Pastry> result = Pastry.GetAll();
       CollectionAssert.AreEqual(newPastryList, result);
+    }
+    [TestMethod]
+    public void
+    GetAll_ReturnsPastryList_PastryList()
+    {
+      string pastryType1 = "biscuit";
+      string pastryType2 = "croissant";
+      Pastry pastry1 = new Pastry(pastryType1, 2);
+      Pastry pastry2 = new Pastry(pastryType2, 2);
+      List<Pastry> newPastryList = new List<Pastry> { pastry1, pastry2 };
+      List<Pastry> result = Pastry.GetAll();
+      List<Pastry> falsePastryList = new List<Pastry> { pastry1, };
+      CollectionAssert.AreEqual(falsePastryList, result);
     }
   }
 }
