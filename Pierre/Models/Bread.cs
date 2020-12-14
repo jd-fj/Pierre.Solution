@@ -30,5 +30,14 @@ namespace Pierre.Models
       _breadOrder.Clear();
     }
 
+    // public static double GTBread()
+    // {
+    //   foreach (Bread loaf in _breadOrder)
+    //   {
+    //     double grandTotal = loaf.SaleCost;
+    //     return grandTotal;
+    //   }
+    // }
+
   }
 }

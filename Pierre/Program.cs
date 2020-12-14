@@ -47,6 +47,9 @@ class Program
     int breadQuant = int.Parse(Console.ReadLine());
     Bread breadOrder = new Bread(breadSelection, breadQuant);
     Console.WriteLine("you ordered " + breadOrder.Quantity + " of the " + breadOrder.BreadKind);
+    Console.WriteLine("Bread.TotalCost: " + breadOrder.TotalCost);
+    Console.WriteLine("Bread.SaleCost: " + breadOrder.SaleCost);
+
     Console.WriteLine("Bread order recieved! Press ['enter'] to see our Pastry menu");
     Console.ReadLine();
     OrderPastry();
