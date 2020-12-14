@@ -11,7 +11,6 @@ namespace Pierre.Models
     public double SaleCost { get; }
     private static List<Pastry> _pastryOrder = new List<Pastry> {};
 
-
     public Pastry(string pastryKind, int quantity)
     {
       PastryKind = pastryKind;
