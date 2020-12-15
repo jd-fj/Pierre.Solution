@@ -6,9 +6,9 @@
 
 ## **Description**
 
-This is the first C# independent project for Epicodus. Here is the prompt for the application: 
+_This is the first C# independent project for Epicodus. Here is the prompt for the application:_
 
-_Create a C# console application for a bakery that includes the following functionality:_
+Create a C# console application for a bakery that includes the following functionality:
 
 - There should be two custom classes: one for Bread and one for Pastry.
 
@@ -22,11 +22,6 @@ _Create a C# console application for a bakery that includes the following functi
 
 - All functionality for the models should be tested.
 
-## Screen Snaps:
-
-<img src='./filename.gif' alt='When I build out a fricken sweet UI console app tomorrow, this gif will look so pretty, and this alt text will be hidden'>
-
-
 ## Setup and Use
 
 #### Prerequisites
@@ -36,7 +31,7 @@ _Create a C# console application for a bakery that includes the following functi
 
 * To confirm download is successful, open terminal and run `$ dotnet --version` You should see a version number like `2.2.106` if download was successful.
 
-* 
+* You'll also need a REPL called 'dotnet script.' You can install that with the following terminal command: `$ dotnet tool install -g dotnet-script`
 
 
 ### Download
@@ -47,7 +42,8 @@ _Open terminal and type the following lines_
 
 _To run this Console Application, enter the following command in terminal_
 
-* `dotnet run`
+* `$ 
+dotnet run`
 
 ### Technologies Used
 - C# 7.3
@@ -57,6 +53,8 @@ _To run this Console Application, enter the following command in terminal_
 - MSTest framework
 
 - VS Code
+
+- GitBash
 
 
 ### Support and contact

@@ -29,5 +29,10 @@ namespace Pierre.Models
     {
       _pastryOrder.Clear();
     }
+
+    public double GetSaleCost()
+    {
+      return SaleCost;
+    }
   }
 }
