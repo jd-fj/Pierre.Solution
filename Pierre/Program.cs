@@ -37,7 +37,7 @@ namespace Pierre
       Console.WriteLine("How many of these sweet baby " + breadSelection + " loaves do you want?");
       int breadQuant = int.Parse(Console.ReadLine());
       Bread breadOrder = new Bread(breadSelection, breadQuant);
-      Console.WriteLine("you ordered " + breadOrder.Quantity + " of the " + breadOrder.BreadKind);
+      Console.WriteLine("You ordered " + breadOrder.Quantity + " of the " + breadOrder.BreadKind + " loaves");
       // potentially loop back to top of OrderBread() here?
       Console.WriteLine("Total Bread Cost: " + breadOrder.TotalCost);
       Console.WriteLine("Sale Price: " + breadOrder.SaleCost);
@@ -78,26 +78,28 @@ namespace Pierre
 
     public static void CheckOut()
     {
-      Console.WriteLine("Would you like to order more? ['Y' for yes, 'N' for no]");
-      string goodBye = Console.ReadLine().ToLower();
+      // Console.WriteLine("Would you like to order more? ['Y' for yes, 'N' for no]");
+      // string goodBye = Console.ReadLine().ToLower();
       
-      if (goodBye == "y")
-      {
-        Main();
-      }
-      else if (goodBye == "n")
-      {
+      // if (goodBye == "y")
+      // {
+      //   Main();
+      // }
+      // else if (goodBye == "n")
+      // {
+        double breadTotal = 0;
         List<Bread> breadBasket = Bread.GetAll();
         foreach (Bread loaf in breadBasket)
         {
-          double breadTotal =+ loaf.SaleCost;
-          Console.WriteLine("Your Bread Total is: $" + breadTotal);
+          breadTotal =+ loaf.SaleCost;
+          Console.WriteLine("write this once");
         }
-      }
-      else
-      {
-        Console.WriteLine("Easter Egg");
-      }
+        // Console.WriteLine("Your Bread Total is: $" + breadTotal);
+      // }
+      // else
+      // {
+      //   Console.WriteLine("Easter Egg");
+      // }
 
     }
   }
