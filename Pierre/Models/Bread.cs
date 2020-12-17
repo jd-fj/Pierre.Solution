@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Pierre.Models
 {
-  public class Bread
+  public class Bread : Animal
   {
     public string BreadKind { get; set; }
     public int Quantity { get; }
