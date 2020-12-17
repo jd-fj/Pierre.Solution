@@ -6,7 +6,7 @@ namespace Pierre.Models
   {
     public string Walk()
     {
-      return "The animal is walking";
+      return "Hello Bread, I am your Parent, and you are my Child Class. I love you.";
     };
   }
 }
