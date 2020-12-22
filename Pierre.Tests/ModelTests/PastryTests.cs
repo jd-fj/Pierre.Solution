@@ -94,8 +94,8 @@ namespace Pierre.Tests
     {
       string pastryType1 = "biscuit";
       string pastryType2 = "croissant";
-      Pastry pastry1 = new Pastry(pastryType1, 2); // test to see 2 does not trigger discount
-      Pastry pastry2 = new Pastry(pastryType2, 3); // test to see 3 triggers discount
+      Pastry pastry1 = new Pastry(pastryType1, 2);
+      Pastry pastry2 = new Pastry(pastryType2, 3);
       int result1 = pastry1.GetSaleCost();
       int result2 = pastry2.GetSaleCost();
       Assert.AreEqual(5, result2);

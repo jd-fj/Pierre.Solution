@@ -47,10 +47,3 @@ namespace Pierre.Models
     }
   }
 }
-// if they are buying more than two bread, then they'll activate the discount
-
-// (totalItems/3)*2+ totalItems%3
-
-// the quotient of dividing the number of dvds by three is the exact number of times they have activated the "buy one get one free" deal.
-
-// % is not quotient, it is modulus

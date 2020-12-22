@@ -92,8 +92,8 @@ namespace Pierre.Tests
       {
         string breadKind = "french";
         string breadKind2 = "pita";
-        Bread loaf1 = new Bread(breadKind, 2); // test to see if 2 does not activate discount
-        Bread loaf2 = new Bread(breadKind2, 3); // test that it does activate discount
+        Bread loaf1 = new Bread(breadKind, 2);
+        Bread loaf2 = new Bread(breadKind2, 3);
         int result = loaf1.GetSaleCost();
         int result2 = loaf2.GetSaleCost();
         Assert.AreEqual(result2, result);

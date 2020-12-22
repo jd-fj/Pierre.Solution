@@ -40,10 +40,18 @@ _Open terminal and type the following lines_
 * `$ git clone https://github.com/taylulz/Pierre-s-Bakery.git`
 * `$ cd Pierre-s-Bakery-main`
 
-_To run this Console Application, enter the following command in terminal_
+_To build the application, enter the following command lines:_
+* `$ cd Pierre`
+* `$ dotnet build`
 
-* `$ 
-dotnet run`
+_To run the application, enter the following command lines:_
+* `$ dotnet run`
+
+_To run through the tests, enter the following command lines:_
+* `$ cd ..`
+* `$ cd Pierre.Tests`
+* `$ dotnet test`
+
 
 ### Technologies Used
 - C# 7.3
