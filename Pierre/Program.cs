@@ -39,7 +39,7 @@ namespace Pierre
       Bread breadOrder = new Bread(breadSelection, breadQuant);
       Console.WriteLine("You ordered " + breadOrder.Quantity + " of the " + breadOrder.BreadKind + " loaves");
       Console.WriteLine("Normal Cost: " + breadOrder.TotalCost);
-      Console.WriteLine("Your Sale Price: " + breadOrder.GetSaleCost()); 
+      Console.WriteLine("Your Sale Price: " + breadOrder.GetSaleCost());
       Console.WriteLine("Bread order recieved! Press ['enter'] to continue to our Pastry menu");
       Console.ReadLine();
       OrderPastry();
