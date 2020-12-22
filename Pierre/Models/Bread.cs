@@ -7,8 +7,8 @@ namespace Pierre.Models
   {
     public string BreadKind { get; set; }
     public int Quantity { get; }
-    // public int TotalCost { get; }
-    // public double SaleCost { get; }
+    public int TotalCost { get; }
+    public double SaleCost { get; }
     public int Price { get; set; }
     private static List<Bread> _breadOrder = new List<Bread> {};
 
@@ -16,8 +16,8 @@ namespace Pierre.Models
     {
       BreadKind = breadKind;
       Quantity = quantity;
-      // TotalCost = quantity * 5;
-      // SaleCost = Math.Round(quantity * (3.33));
+      TotalCost = quantity * 5;
+      SaleCost = Math.Round(quantity * (3.33));
       _breadOrder.Add(this);
       Price = 0;
     }
@@ -32,9 +32,9 @@ namespace Pierre.Models
       _breadOrder.Clear();
     }
     
-    public int SaleCost()
+    public int GetSaleCost()
     {
-      if (Quantity == 1)
+      if (Quantity <= 2)
       {
         int cost = (Quantity * 5);
         return cost;
@@ -45,7 +45,6 @@ namespace Pierre.Models
         return cost;
       }
     }
-
   }
 }
 // if they are buying more than one bread, then they'll activate the discount
