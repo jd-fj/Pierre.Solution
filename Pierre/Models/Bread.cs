@@ -47,7 +47,7 @@ namespace Pierre.Models
     }
   }
 }
-// if they are buying more than one bread, then they'll activate the discount
+// if they are buying more than two bread, then they'll activate the discount
 
 // (totalItems/3)*2+ totalItems%3
 
