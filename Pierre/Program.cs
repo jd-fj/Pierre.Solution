@@ -38,10 +38,8 @@ namespace Pierre
       int breadQuant = int.Parse(Console.ReadLine());
       Bread breadOrder = new Bread(breadSelection, breadQuant);
       Console.WriteLine("You ordered " + breadOrder.Quantity + " of the " + breadOrder.BreadKind + " loaves");
-      // potentially loop back to top of OrderBread() here?
-      // Console.WriteLine("Total Bread Cost: " + breadOrder.TotalCost);
-      Console.WriteLine("Sale Price: " + breadOrder.GetSaleCost()); // this line will test my SaleCost() method
-      // Console.WriteLine("Total Savings: " + (breadOrder.TotalCost - breadOrder.SaleCost));
+      Console.WriteLine("Normal Cost: " + breadOrder.TotalCost);
+      Console.WriteLine("Your Sale Price: " + breadOrder.GetSaleCost()); 
       Console.WriteLine("Bread order recieved! Press ['enter'] to continue to our Pastry menu");
       Console.ReadLine();
       OrderPastry();
