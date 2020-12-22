@@ -39,9 +39,9 @@ namespace Pierre
       Bread breadOrder = new Bread(breadSelection, breadQuant);
       Console.WriteLine("You ordered " + breadOrder.Quantity + " of the " + breadOrder.BreadKind + " loaves");
       // potentially loop back to top of OrderBread() here?
-      Console.WriteLine("Total Bread Cost: " + breadOrder.TotalCost);
-      Console.WriteLine("Sale Price: " + breadOrder.SaleCost);
-      Console.WriteLine("Total Savings: " + (breadOrder.TotalCost - breadOrder.SaleCost));
+      // Console.WriteLine("Total Bread Cost: " + breadOrder.TotalCost);
+      Console.WriteLine("Sale Price: " + breadOrder.SaleCost());
+      // Console.WriteLine("Total Savings: " + (breadOrder.TotalCost - breadOrder.SaleCost));
       Console.WriteLine("Bread order recieved! Press ['enter'] to continue to our Pastry menu");
       Console.ReadLine();
       OrderPastry();
@@ -87,18 +87,18 @@ namespace Pierre
       // }
       // else if (goodBye == "n")
       // {
-        double breadTotal = 0;
-        List<Bread> breadBasket = Bread.GetAll();
-        foreach (Bread loaf in breadBasket)
-        {
-          breadTotal =+ loaf.SaleCost;
-          Console.WriteLine("write this once");
-        }
+        // double breadTotal = 0;
+        // List<Bread> breadBasket = Bread.GetAll();
+        // foreach (Bread loaf in breadBasket)
+        // {
+        //   breadTotal =+ loaf.SaleCost;
+        //   Console.WriteLine("write this once");
+        // }
 
-        foreach (Bread loaf in breadBasket)
-        {
-          Console.WriteLine(loaf.BreadKind);
-        }
+        // foreach (Bread loaf in breadBasket)
+        // {
+        //   Console.WriteLine(loaf.BreadKind);
+        // }
         // Console.WriteLine("Your Bread Total is: $" + breadTotal);
       // }
       // else
