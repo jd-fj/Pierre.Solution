@@ -94,6 +94,11 @@ namespace Pierre
           breadTotal =+ loaf.SaleCost;
           Console.WriteLine("write this once");
         }
+
+        foreach (Bread loaf in breadBasket)
+        {
+          Console.WriteLine(loaf.BreadKind);
+        }
         // Console.WriteLine("Your Bread Total is: $" + breadTotal);
       // }
       // else

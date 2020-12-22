@@ -7,17 +7,19 @@ namespace Pierre.Models
   {
     public string BreadKind { get; set; }
     public int Quantity { get; }
-    public int TotalCost { get; }
-    public double SaleCost { get; }
+    // public int TotalCost { get; }
+    // public double SaleCost { get; }
+    public int Price { get; set; }
     private static List<Bread> _breadOrder = new List<Bread> {};
 
     public Bread(string breadKind, int quantity)
     {
       BreadKind = breadKind;
       Quantity = quantity;
-      TotalCost = quantity * 5;
-      SaleCost = Math.Round(quantity * (3.33));
+      // TotalCost = quantity * 5;
+      // SaleCost = Math.Round(quantity * (3.33));
       _breadOrder.Add(this);
+      Price = 0;
     }
 
     public static List<Bread> GetAll()
@@ -29,6 +31,18 @@ namespace Pierre.Models
     {
       _breadOrder.Clear();
     }
+    
+    public int TotalBread()
+    {
+      if (Quantity % 3 == 0)
+      {
+        int Price = (Quantity/3)
+      }
+    }
 
   }
 }
+
+// the quotient of dividing the number of dvds by three is the exact number of times they have activated the "buy one get one free" deal.
+
+// % is not quotient, it is modulus
