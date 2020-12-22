@@ -36,7 +36,7 @@ namespace Pierre.Models
     {
       if (Quantity <= 2)
       {
-        int cost = (Quantity * 10);
+        int cost = (Quantity * 5);
         return cost;
       }
       else
