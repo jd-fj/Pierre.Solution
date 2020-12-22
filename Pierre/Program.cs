@@ -31,12 +31,26 @@ namespace Pierre
         string pastryYesOrNo = Console.ReadLine().ToLower();
         if (pastryYesOrNo == "y")
         {
-          // return pastryOrder;
+          Console.WriteLine("What type of pastry do you want?");
+          string pastrySelection = Console.ReadLine();
+          Console.WriteLine("How many?");
+          int pastryQuant = int.Parse(Console.ReadLine());
+          Pastry newPastryOrder = new Pastry(pastrySelection, pastryQuant);
+          int pastryGt = newPastryOrder.GetSaleCost();
+          Console.WriteLine("Sale Price: " + pastryGt);
         }
         else
         {
-          Console.WriteLine("Press enter to check out");
+          List<Bread> breadBasket = Bread.GetAll();
+          List<Pastry> pastryBasket = Pastry.GetAll();
+          foreach (Bread bread in breadBasket)
+          {
+            int breadGt = bread.GetSaleCost();
+            Console.WriteLine("Bread: " + bread.GetSaleCost());
+          }
+
         }
+        
       }
       // Console.WriteLine(BreadTotal);
       // Console.WriteLine(PastryTotal);
