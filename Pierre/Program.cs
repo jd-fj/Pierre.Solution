@@ -66,16 +66,15 @@ namespace Pierre
       Console.WriteLine("How many of these little " + pastrySelection + " do you want?");
       int pastryQuant = int.Parse(Console.ReadLine());
       Pastry newPastryOrder = new Pastry(pastrySelection, pastryQuant);
-      // potentially add loop to go back to OrderPastry for more?
       Console.WriteLine("Total Pastry Cost: " + newPastryOrder.TotalCost);
-      Console.WriteLine("Sale Price: " + newPastryOrder.SaleCost);
-      Console.WriteLine("Total Savings: " + (newPastryOrder.TotalCost - newPastryOrder.SaleCost));
+      Console.WriteLine("Sale Price: " + newPastryOrder.GetSaleCost());
       }
       CheckOut();
     }
 
     public static void CheckOut()
     {
+      
       // Console.WriteLine("Would you like to order more? ['Y' for yes, 'N' for no]");
       // string goodBye = Console.ReadLine().ToLower();
       
