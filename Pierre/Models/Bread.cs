@@ -34,14 +34,19 @@ namespace Pierre.Models
     
     public int TotalBread()
     {
-      if (Quantity % 3 == 0)
+      if (Quantity % 3 != 0)
       {
-        int Price = (Quantity/3)
+        int Price = (Quantity * 5)
+      }
+      else
+      {
+        int Price = ((totalItems / 3) * 10) + ((totalItems % 3) * 5))
       }
     }
 
   }
 }
+// (totalItems/3)*2+ totalItems%3
 
 // the quotient of dividing the number of dvds by three is the exact number of times they have activated the "buy one get one free" deal.
 
