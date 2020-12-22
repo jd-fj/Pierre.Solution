@@ -88,8 +88,7 @@ namespace Pierre.Tests
         CollectionAssert.AreEqual(newBreadList, result);
       }
       [TestMethod]
-      public void
-      SaleCost_ReturnsSalePriceOfBreadOrder_Int()
+      public void SaleCost_ReturnsSalePriceOfBreadOrder_Int()
       {
         string breadKind = "french";
         string breadKind2 = "pita";

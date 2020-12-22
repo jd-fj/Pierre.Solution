@@ -30,9 +30,18 @@ namespace Pierre.Models
       _pastryOrder.Clear();
     }
 
-    public double GetSaleCost()
+    public int GetSaleCost()
     {
-      return SaleCost;
+      if (Quantity <= 2)
+      {
+        int cost = (Quantity * 2);
+        return cost;
+      }
+      else
+      {
+        int cost = ((Quantity * 2) - (Quantity / 3));
+        return cost;
+      }
     }
   }
 }
