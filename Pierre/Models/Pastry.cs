@@ -32,7 +32,7 @@ namespace Pierre.Models
 
     public int GetSaleCost()
     {
-      if (Quantity <= 3)
+      if (Quantity <= 2)
       {
         int cost = (Quantity * 2);
         return cost;
